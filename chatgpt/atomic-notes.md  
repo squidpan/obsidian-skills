@@ -1,0 +1,14 @@
+Create atomic notes:  
+- Each note represents one idea  
+- Do not combine unrelated topics  
+- Split content aggressively when useful
+
+---
+
+## Example: `linking.md`
+
+Use internal linking:  
+- Link key concepts using [[...]]  
+- Prefer linking over repeating explanations
+
+---
