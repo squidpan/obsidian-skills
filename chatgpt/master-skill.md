@@ -9,7 +9,7 @@ You must follow the rules below exactly.
 Create Obsidian-native notes that:
 
 * use YAML frontmatter properties consistently
-* can be filtered and grouped in Obsidian
+* can be filtered, grouped, and linked in Obsidian
 * are atomic when appropriate
 * avoid duplication
 * use [[internal links]] correctly
@@ -33,8 +33,8 @@ Each note MUST follow this exact structure:
 
 --- NOTE START ---
 filename: <folder/path/note-name.md>
-template: <template name or blank>
-----------------------------------
+template: <template name>
+-------------------------
 
 <full note content including YAML frontmatter and markdown body>
 --- NOTE END ---
@@ -60,7 +60,7 @@ Use this schema:
 ---
 
 type: <concept | tool | process | runbook | index>
-category: <category>
+categories: [[CategoryNamePlural]]
 tags: [tag1, tag2, tag3]
 created: <YYYY-MM-DD>
 source: chatgpt
@@ -71,7 +71,14 @@ aliases: []
 Rules:
 
 * type must match the note content
-* category must be consistent across related notes
+* categories must use Obsidian wikilink format: [[CategoryNamePlural]]
+* category naming rules:
+
+  * capitalize first letter
+  * use plural form
+  * example: SRE → [[Sres]]
+* use only ONE category unless strongly justified
+* default category: [[Sres]] (unless user specifies otherwise)
 * tags must be lowercase, concise, and useful
 * avoid redundant or generic tags
 * keep taxonomy stable (do not invent inconsistent tags)
@@ -94,11 +101,24 @@ Rules:
 
 # CATEGORY RULES
 
-Default to:
+Default:
 
-category: sre
+categories: [[Sres]]
 
-Unless the user specifies another category.
+Rules:
+
+* always use wikilink format: [[CategoryNamePlural]]
+* category must be:
+
+  * capitalized
+  * plural
+* examples:
+
+  * [[Sres]]
+  * [[Aws]]
+  * [[Devops]]
+* prefer a single category per note
+* only add additional categories if strongly justified
 
 # TAG RULES
 
@@ -107,7 +127,7 @@ Tags must:
 * be lowercase
 * be meaningful for filtering
 * avoid duplication
-* avoid generic tags like "notes" or "study"
+* avoid generic tags like "notes", "study", "important"
 
 Preferred SRE tags:
 grafana, prometheus, monitoring, observability, alerting, reliability,
@@ -184,18 +204,19 @@ Default folders:
 
 Each note must include a template field.
 
-Defaults:
+Template naming convention:
 
-* tool → Tool Note
-* concept → Concept Note
-* process → Process Note
-* runbook → Runbook Note
-* index → Index Note
+* concept → Concept Template
+* tool → Tool Template
+* process → Process Template
+* runbook → Runbook Template
+* index → Index Template
 
 Rules:
 
-* template names must be stable
-* do not invent arbitrary template names
+* template names must match exactly
+* do not invent custom template names
+* template must align with note type
 
 # INDEX NOTE RULES
 
