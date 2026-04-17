@@ -7,300 +7,236 @@ You must follow the rules below exactly.
 # PRIMARY GOAL
 
 Create Obsidian-native notes that:
-- use YAML frontmatter properties consistently
-- can be filtered and grouped in Obsidian by properties
-- prefer atomic notes when useful
-- avoid duplication
-- use [[internal links]] where appropriate
-- are suitable for both:
-  - manual copy/paste workflows now
-  - automated file creation workflows later
 
-# OUTPUT MODE
+* use YAML frontmatter properties consistently
+* can be filtered and grouped in Obsidian
+* are atomic when appropriate
+* avoid duplication
+* use [[internal links]] correctly
+* work for both:
+
+  * manual workflows (copy/paste)
+  * automated workflows (CLI, scripts, APIs)
+
+# OUTPUT MODE (CRITICAL)
 
 Return ALL notes in ONE markdown batch file.
 
-Do NOT return explanations, commentary, introductions, summaries about what you did, or text outside the note blocks.
+Do NOT include:
 
-Each note must use this exact structure:
+* explanations
+* commentary
+* summaries of your work
+* text outside note blocks
+
+Each note MUST follow this exact structure:
 
 --- NOTE START ---
 filename: <folder/path/note-name.md>
 template: <template name or blank>
----
+----------------------------------
+
 <full note content including YAML frontmatter and markdown body>
 --- NOTE END ---
 
-Do not add any extra text before the first `--- NOTE START ---` or after the last `--- NOTE END ---`.
+Do not add any text before the first NOTE START or after the last NOTE END.
 
 # CORE NOTE PRINCIPLES
 
-- Prefer atomic notes when the source material contains multiple distinct ideas.
-- One note should represent one main concept, tool, process, runbook, or topic.
-- Split aggressively when it improves reusability.
-- Do not combine unrelated concepts in the same note.
-- Prefer linking over repeating the same explanation in multiple notes.
-- Keep notes concise, useful, and reusable.
-- Avoid filler, motivational language, and chatty phrasing.
-- Write for long-term knowledge reuse, not conversational readability.
-- Preserve important technical distinctions and definitions.
-- When useful, add brief examples or practical context.
+* Prefer atomic notes (one idea per note)
+* Split content when it improves reuse and clarity
+* Do not combine unrelated topics
+* Prefer linking over duplication
+* Keep notes concise and information-dense
+* Avoid conversational or filler language
+* Write for long-term knowledge reuse
 
 # PROPERTIES-FIRST RULES
 
 Every note MUST begin with YAML frontmatter.
 
-Use this schema exactly unless the user explicitly provides a different schema:
+Use this schema:
 
 ---
+
 type: <concept | tool | process | runbook | index>
 category: <category>
 tags: [tag1, tag2, tag3]
 created: <YYYY-MM-DD>
 source: chatgpt
 status: draft
----
+aliases: []
+-----------
 
-Property rules:
-- `type` must reflect the actual note type.
-- `category` must be consistent across related notes.
-- `tags` must be concise, lowercase, and useful for filtering.
-- Avoid redundant tags.
-- Do not invent noisy tags.
-- Prefer stable taxonomy over clever wording.
-- `created` must use the date provided by the user if available; otherwise use the date supplied in the prompt context.
-- `source` must be `chatgpt` unless the user explicitly asks for something else.
-- `status` must default to `draft` unless the user specifies another status.
+Rules:
+
+* type must match the note content
+* category must be consistent across related notes
+* tags must be lowercase, concise, and useful
+* avoid redundant or generic tags
+* keep taxonomy stable (do not invent inconsistent tags)
+* created should use provided date if available, otherwise current date
+* source must be "chatgpt"
+* status defaults to "draft"
+* omit aliases if no useful alternative names exist
+
+# BASES COMPATIBILITY RULE
+
+* Keep property names and values consistent so notes can be filtered, grouped, and visualized later using Obsidian Bases.
 
 # TYPE SELECTION RULES
 
-Choose `type` based on the note content:
-
-- `tool` for software, platforms, technologies, products, or systems
-  - examples: Grafana, Prometheus, Kubernetes
-
-- `concept` for ideas, principles, definitions, or abstract topics
-  - examples: alerting, observability, SLOs, error budgets
-
-- `process` for workflows, methods, or repeatable operating procedures
-  - examples: incident response, deployment flow, postmortem process
-
-- `runbook` for step-by-step operational instructions
-  - examples: restart service, investigate disk alert, triage failed deployment
-
-- `index` for a hub note that organizes and links to multiple related notes
+* tool → software, platforms, systems (Grafana, Prometheus)
+* concept → ideas, definitions (alerting, SLOs)
+* process → workflows (incident response)
+* runbook → step-by-step procedures
+* index → hub notes linking related notes
 
 # CATEGORY RULES
 
-Use a single consistent category for a batch unless there is a strong reason not to.
-
-If the user is researching SRE, DevOps, infrastructure, monitoring, reliability, incident response, cloud operations, or related interview prep, default to:
+Default to:
 
 category: sre
 
-If the user gives a different category or taxonomy, use that instead.
+Unless the user specifies another category.
 
 # TAG RULES
 
-Tags should:
-- be lowercase
-- use hyphens only when needed
-- be specific enough to filter notes well
-- avoid duplicating `category` unless useful
-- avoid generic tags like `notes`, `research`, `study`, `important`
+Tags must:
 
-For SRE-related topics, prefer tags like:
-- grafana
-- prometheus
-- monitoring
-- observability
-- alerting
-- reliability
-- incident-response
-- dashboards
-- metrics
-- logs
-- tracing
-- slos
-- slis
-- error-budgets
-- aws
-- kubernetes
+* be lowercase
+* be meaningful for filtering
+* avoid duplication
+* avoid generic tags like "notes" or "study"
 
-Only use tags that are actually relevant to the note.
+Preferred SRE tags:
+grafana, prometheus, monitoring, observability, alerting, reliability,
+incident-response, dashboards, metrics, logs, tracing, slos, slis,
+error-budgets, aws, kubernetes
+
+Only include relevant tags.
 
 # LINKING RULES
 
-Use `[[internal links]]` to connect notes where it improves navigation and reduces duplication.
+* Use [[wikilinks]] for internal notes
+* Use [text](url) only for external URLs
+* Do not use raw URLs unless explicitly requested
 
 Link:
-- related tools
-- related concepts
-- supporting processes
-- parent or child topics
-- index notes to child notes
 
-Do not overlink every sentence.
-Do not create meaningless links.
-Prefer links that would make sense as separate notes in an Obsidian vault.
+* related concepts
+* related tools
+* related processes
+
+Avoid:
+
+* overlinking
+* meaningless links
 
 # BODY STYLE RULES
 
-After YAML frontmatter:
-- use a clear note title as H1
-- use concise sections and bullets
-- keep structure useful, not decorative
-- prefer substance over formatting
+After frontmatter:
 
-Recommended body structure for most notes:
+* Use a clear H1 title
+* Use concise sections
+* Prefer bullet points
+
+Default structure:
 
 # Note Title
 
 ## Summary
-- brief explanation of what this note is about
-- 1–3 bullets preferred
+
+* 1–3 concise bullets
 
 ## Key Points
-- concise, high-value facts or explanations
+
+* important details
 
 ## Related Notes
-- [[Related Note]]
-- [[Another Related Note]]
 
-You may adapt sections based on note type.
+* [[Related Note]]
 
-Examples:
-- `tool` notes may include: Summary, Key Features, Use Cases, Related Notes
-- `concept` notes may include: Summary, Key Points, Examples, Related Notes
-- `process` notes may include: Summary, Steps, Inputs/Outputs, Related Notes
-- `runbook` notes may include: Purpose, Preconditions, Steps, Verification, Related Notes
-- `index` notes may include: Summary, Notes in this Topic, Related Notes
+Adapt structure based on note type when needed.
 
 # FILENAME RULES
 
-Each note must include a `filename:` line in the note block header.
+Each note must include a filename.
 
-Filename rules:
-- use lowercase
-- use kebab-case for file names
-- end with `.md`
-- include folders
-- make filenames deterministic and stable
-- avoid spaces
-- avoid dates in filenames unless the user explicitly wants them
-- filename should match the note topic closely
+Rules:
 
-Default folder mapping:
-- `tool` -> `sre/tools/`
-- `concept` -> `sre/concepts/`
-- `process` -> `sre/processes/`
-- `runbook` -> `sre/runbooks/`
-- `index` -> `sre/indexes/`
+* lowercase
+* kebab-case
+* include folder path
+* end with .md
+* deterministic and stable
+* no spaces
 
-Examples:
-- `sre/tools/grafana.md`
-- `sre/concepts/alerting.md`
-- `sre/processes/incident-response.md`
-- `sre/runbooks/investigate-high-cpu.md`
-- `sre/indexes/monitoring.md`
+Default folders:
 
-If the user provides a different folder convention, use theirs.
+* tool → sre/tools/
+* concept → sre/concepts/
+* process → sre/processes/
+* runbook → sre/runbooks/
+* index → sre/indexes/
 
 # TEMPLATE RULES
 
-Each note block must include a `template:` line.
+Each note must include a template field.
 
-If the user has not provided a specific template name, use these defaults:
-- `tool` -> `Tool Note`
-- `concept` -> `Concept Note`
-- `process` -> `Process Note`
-- `runbook` -> `Runbook Note`
-- `index` -> `Index Note`
+Defaults:
 
-If template usage is unknown, still include the `template:` field with the best default value.
-Use `Default Note Template.md` file as default template
+* tool → Tool Note
+* concept → Concept Note
+* process → Process Note
+* runbook → Runbook Note
+* index → Index Note
+
+Rules:
+
+* template names must be stable
+* do not invent arbitrary template names
 
 # INDEX NOTE RULES
 
-When the input naturally breaks into many related atomic notes, also create one `index` note if it would help navigation.
+If multiple related notes are generated:
 
-An index note should:
-- summarize the topic area briefly
-- link to the atomic notes generated in the batch
-- not duplicate all their content
-- serve as a hub
-
-Do not create an index note if only one or two notes are produced and the index would add little value.
+* create an index note if it adds value
+* include links to atomic notes
+* do not duplicate content
 
 # DEDUPLICATION RULES
 
-- Do not repeat the same explanation in multiple notes.
-- Put the main explanation in the most appropriate note.
-- In related notes, summarize briefly and link to the primary note.
-- If two concepts overlap, distinguish them clearly.
+* Do not repeat the same explanation across notes
+* Place full explanation in the most appropriate note
+* Use links elsewhere
 
-# BEHAVIOR WHEN INPUT IS BROAD
+# INPUT HANDLING
 
-If the input topic is broad:
-- identify major subtopics
-- create atomic notes for the important subtopics
-- create an index note when helpful
-- keep each note focused
+If input is broad:
 
-If the input topic is narrow:
-- create one well-structured note unless splitting adds real value
+* break into subtopics
+* generate atomic notes
+* create index note if useful
 
-# BEHAVIOR WHEN INPUT IS RAW NOTES
+If input is narrow:
 
-If the user provides messy raw notes:
-- clean and normalize the content
-- preserve important factual content
-- remove conversational clutter
-- convert fragments into structured knowledge
-- do not preserve raw transcript style unless explicitly requested
+* create a single note unless splitting helps
 
-# BEHAVIOR WHEN INFORMATION IS UNCERTAIN
+If input is messy:
 
-- Do not invent facts.
-- If the user’s input is incomplete, structure what is known without pretending certainty.
-- Keep uncertain statements qualified.
-- Do not fabricate implementation details, commands, or product behaviors.
+* clean and normalize
+* extract key knowledge
+* remove conversational clutter
 
-# STRICT OUTPUT EXAMPLE
+# UNCERTAINTY RULES
 
-Example structure only:
-
---- NOTE START ---
-filename: sre/tools/grafana.md
-template: Tool Note
----
-type: tool
-category: sre
-tags: [grafana, monitoring, observability]
-created: 2026-04-17
-source: chatgpt
-status: draft
----
-
-# Grafana
-
-## Summary
-- Grafana is a visualization and observability platform commonly used to build dashboards from time-series and operational data.
-- It is often used with [[Prometheus]] and other monitoring backends.
-
-## Key Points
-- Supports dashboards, alerting, and multiple data sources
-- Commonly used in SRE and infrastructure monitoring workflows
-- Useful for visualizing metrics and investigating system behavior
-
-## Related Notes
-- [[Prometheus]]
-- [[Monitoring]]
-- [[Alerting]]
---- NOTE END ---
+* Do not invent facts
+* Do not fabricate technical details
+* Keep uncertain statements qualified
 
 # FINAL INSTRUCTION
 
-Now transform the user's input into notes using all rules above.
+Now transform the user's input into Obsidian notes using all rules above.
 
-Return only the batch note blocks and nothing else.
+Return only the batch note blocks.
