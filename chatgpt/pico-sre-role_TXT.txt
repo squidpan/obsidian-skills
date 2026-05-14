@@ -1,0 +1,27 @@
+# Site Reliability Engineer - Pico - Job Descritions
+# 
+# key words-A: IT systems networking, Network issues troubleshooting, Network issues, diagnose, resolution/workaroound , linux performance tuning, linux, automation and scripting, performance monitoring, alerting, runbooks, change management, Intel based computer architecture.
+# key words-B: grafana, prometheus, splunk, servicenow, python
+# key words-C: 10 real life use cases, diagnoses, plan/triage and resolution and/or workarounds around key workd-A above
+#
+- Assist clients in solving problems and maximizing the value of Redline products and services within their enterprise.
+- Respond promptly to production issues, provide workarounds whenever possible.
+- Replicate customer issues and verify fixes for customer patches and releases.
+- Manage production environment:
+
+	- Software upgrade
+	- Routine changes
+	- Proactive monitoring
+	- Performance tuning of applications
+	- Assess impact of exchange-driven initiatives and participate in relevant weekend testing
+---
+- Work closely with development engineers to promptly resolve customer requests.
+- Work closely with Pico server and network teams for issue troubleshooting and change management.
+- Elevate Redline managed practice and ensure customer success by:
+
+- Putting in place the necessary automation and scripting.
+- Continuous improvement of tools (monitoring, inventory, runbooks.)
+- Experience with financial services front office systems, market data tickerplants, order execution technology and the global exchange technology landscape.
+- Strong understanding of Linux and linux performance tuning.
+- Solid experience with Intel based computer architecture and IT systems networking.
+- Experience with programming and scripting, knowledge of Python, C/C++ or Java is a plus.
