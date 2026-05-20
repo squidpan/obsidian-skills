@@ -41,9 +41,9 @@ input_prompt: 01_ba-aegis-application-support-skill-v1.md
 - Managing production validation activities
 
 ## Related Notes
-- [[Senior Business Analyst and Application Support Professional]]
-- [[Production Application Support]]
-- [[ServiceNow]]
-- [[Failed Deployment Recovery]]
+- [[senior-business-analyst-and-application-support-professional]]
+- [[production-application-support]]
+- [[servicenow]]
+- [[failed-deployment-recovery]]
 
 

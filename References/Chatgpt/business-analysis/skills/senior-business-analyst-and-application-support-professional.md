@@ -53,14 +53,14 @@ prompts:
 - Supporting PEGA workflow and low-code platform initiatives
 
 ## Related Notes
-- [[Production Application Support]]
-- [[Underwriting Workflow Systems]]
-- [[Low-Code Application Platforms]]
-- [[PEGA Platform]]
-- [[ServiceNow]]
-- [[Release Management Workflow]]
-- [[Incident Escalation Workflow]]
-- [[Failed Deployment Recovery]]
-- [[Insurance Workflow Failure]]
+- [[production-application-support]]
+- [[underwriting-workflow-systems]]
+- [[low-code-application-platforms]]
+- [[pega-platform]]
+- [[servicenow]]
+- [[release-management-workflow]]
+- [[incident-escalation-workflow]]
+- [[failed-deployment-recovery]]
+- [[insurance-workflow-failure]]
 
 

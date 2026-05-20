@@ -40,9 +40,9 @@ input_prompt: 01_ba-aegis-application-support-skill-v1.md
 - Managing operational workflow automation
 
 ## Related Notes
-- [[Senior Business Analyst and Application Support Professional]]
-- [[Underwriting Workflow Systems]]
-- [[Low-Code Application Platforms]]
-- [[Insurance Workflow Failure]]
+- [[senior-business-analyst-and-application-support-professional]]
+- [[underwriting-workflow-systems]]
+- [[low-code-application-platforms]]
+- [[insurance-workflow-failure]]
 
 

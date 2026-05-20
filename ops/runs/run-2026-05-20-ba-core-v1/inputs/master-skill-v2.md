@@ -248,6 +248,24 @@ Generate supporting notes as needed:
 - Use [[wikilinks]]
 - Avoid excessive linking
 
+- All internal wikilinks MUST reference the actual note filename without `.md`
+- Internal wikilinks MUST use lowercase kebab-case note names
+- Wikilinks should match the generated filename without `.md`
+- Internal wikilinks MUST use lowercase kebab-case note names
+- Wikilinks should match the generated filename without `.md`
+
+
+Example:
+[[low-code-application-platforms]]
+[[pega-platform]]
+[[incident-escalation-workflow]]
+
+Correct:
+[[low-code-application-platforms]]
+
+Incorrect:
+[[Low-Code Application Platforms]]
+
 ## CONTENT STRUCTURE (ALL NOTES)
 
 ```markdown

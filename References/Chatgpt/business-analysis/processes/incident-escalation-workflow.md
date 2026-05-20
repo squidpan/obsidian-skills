@@ -41,9 +41,9 @@ input_prompt: 01_ba-aegis-application-support-skill-v1.md
 - Supporting enterprise operational recovery efforts
 
 ## Related Notes
-- [[Senior Business Analyst and Application Support Professional]]
-- [[Production Application Support]]
-- [[ServiceNow]]
-- [[Insurance Workflow Failure]]
+- [[senior-business-analyst-and-application-support-professional]]
+- [[production-application-support]]
+- [[servicenow]]
+- [[insurance-workflow-failure]]
 
 

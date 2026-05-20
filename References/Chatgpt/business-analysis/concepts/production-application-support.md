@@ -41,9 +41,9 @@ input_prompt: 01_ba-aegis-application-support-skill-v1.md
 - Validating releases after deployment
 
 ## Related Notes
-- [[Senior Business Analyst and Application Support Professional]]
-- [[Incident Escalation Workflow]]
-- [[Failed Deployment Recovery]]
-- [[ServiceNow]]
+- [[senior-business-analyst-and-application-support-professional]]
+- [[incident-escalation-workflow]]
+- [[failed-deployment-recovery]]
+- [[servicenow]]
 
 

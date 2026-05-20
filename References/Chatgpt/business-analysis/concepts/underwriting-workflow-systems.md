@@ -2,7 +2,7 @@
 categories:
   - "[[Concepts]]"
 type: concept
-description: Enterprise workflow systems used to manage underwriting operations, approvals, and insurance process orchestration.
+description: Enterprise workflow systems used to manage underwriting operations, approvals, routing, and insurance process orchestration.
 source: chatgpt
 tags:
   - underwriting
@@ -40,9 +40,9 @@ input_prompt: 01_ba-aegis-application-support-skill-v1.md
 - Investigating blocked or failed workflow states
 
 ## Related Notes
-- [[Senior Business Analyst and Application Support Professional]]
-- [[PEGA Platform]]
-- [[Low-Code Application Platforms]]
-- [[Insurance Workflow Failure]]
+- [[senior-business-analyst-and-application-support-professional]]
+- [[pega-platform]]
+- [[low-code-application-platforms]]
+- [[insurance-workflow-failure]]
 
 

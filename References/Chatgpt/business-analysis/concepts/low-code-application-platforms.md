@@ -40,8 +40,8 @@ input_prompt: 01_ba-aegis-application-support-skill-v1.md
 - Managing workflow automation initiatives
 
 ## Related Notes
-- [[Senior Business Analyst and Application Support Professional]]
-- [[PEGA Platform]]
-- [[Underwriting Workflow Systems]]
+- [[senior-business-analyst-and-application-support-professional]]
+- [[pega-platform]]
+- [[underwriting-workflow-systems]]
 
 

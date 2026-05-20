@@ -41,10 +41,10 @@ input_prompt: 01_ba-aegis-application-support-skill-v1.md
 - Production issue involving low-code configuration changes
 
 ## Related Notes
-- [[Senior Business Analyst and Application Support Professional]]
-- [[Underwriting Workflow Systems]]
-- [[Incident Escalation Workflow]]
-- [[Failed Deployment Recovery]]
-- [[PEGA Platform]]
+- [[senior-business-analyst-and-application-support-professional]]
+- [[underwriting-workflow-systems]]
+- [[incident-escalation-workflow]]
+- [[failed-deployment-recovery]]
+- [[pega-platform]]
 
 

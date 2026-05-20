@@ -41,9 +41,9 @@ input_prompt: 01_ba-aegis-application-support-skill-v1.md
 - Managing operational recovery during modernization projects
 
 ## Related Notes
-- [[Senior Business Analyst and Application Support Professional]]
-- [[Release Management Workflow]]
-- [[Production Application Support]]
-- [[ServiceNow]]
+- [[senior-business-analyst-and-application-support-professional]]
+- [[release-management-workflow]]
+- [[production-application-support]]
+- [[servicenow]]
 
 
