@@ -224,6 +224,10 @@ prompts:
 When NOTE TYPE = Skill:
 
 - Generate ONE Skill note
+- Title MUST be:
+
+Site Reliability Engineer
+
 - categories MUST include [[Skills]]
 
 ## Supporting Notes
@@ -270,9 +274,8 @@ Generate supporting notes as needed:
 ## STYLE RULES
 - concise
 - no fluff
+- SRE-focused
 - practical over theoretical
-- operationally focused
-- interview relevant
 
 ## OUTPUT FORMAT (CRITICAL)
 
@@ -281,7 +284,7 @@ Return ALL notes in ONE batch file.
 Each note MUST follow EXACTLY:
 
 --- NOTE START ---
-filename: References/Chatgpt/<domain>/<folder>/<note>.md
+filename: References/Chatgpt/sre/<folder>/<note>.md
 template: <Template Name>
 -------------------------
 <full note>
@@ -289,7 +292,7 @@ template: <Template Name>
 
 ## FILENAME RULES
 
-References/Chatgpt/<domain>/<type-folder>/<note-name>.md
+References/Chatgpt/sre/<type-folder>/<note-name>.md
 
 ## Folder Mapping
 
@@ -342,27 +345,6 @@ Contains:
 - run-manifest.md
 - run.log
 - inputs/
-
-
-
-## MULTI-BLOCK OUTPUT RULE
-
-When generating a Skill note, supporting notes are not optional placeholders.
-
-If the Skill note links to a supporting note, that supporting note MUST be included as a full NOTE block in the same batch output.
-
-Do not generate only the Skill note.
-Expected Skill runs should usually produce 8–12 NOTE blocks.
-
-## DOMAIN RULE
-
-The domain folder is determined by the input prompt context.
-
-Examples:
-- sre
-- business-analysis
-- devops
-- networking
 
 # FINAL BEHAVIOR
 
