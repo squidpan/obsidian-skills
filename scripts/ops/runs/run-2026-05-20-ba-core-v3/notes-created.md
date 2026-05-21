@@ -1,0 +1,11 @@
+# Notes Created
+- References/Chatgpt/business-analysis/skills/senior-business-analyst-and-application-support-professional.md
+- References/Chatgpt/business-analysis/concepts/production-application-support.md
+- References/Chatgpt/business-analysis/concepts/underwriting-workflow-systems.md
+- References/Chatgpt/business-analysis/concepts/low-code-application-platforms.md
+- References/Chatgpt/business-analysis/tools/pega-platform.md
+- References/Chatgpt/business-analysis/tools/servicenow.md
+- References/Chatgpt/business-analysis/processes/release-management-workflow.md
+- References/Chatgpt/business-analysis/processes/incident-escalation-workflow.md
+- References/Chatgpt/business-analysis/runbooks/failed-deployment-recovery.md
+- References/Chatgpt/business-analysis/usecases/insurance-workflow-failure.md
