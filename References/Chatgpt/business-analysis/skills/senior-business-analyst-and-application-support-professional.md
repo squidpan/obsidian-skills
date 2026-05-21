@@ -62,5 +62,3 @@ prompts:
 - [[incident-escalation-workflow]]
 - [[failed-deployment-recovery]]
 - [[insurance-workflow-failure]]
-
-
